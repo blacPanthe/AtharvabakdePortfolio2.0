@@ -1,0 +1,21 @@
+{
+  "name": "Atharva Bakde | Data Analytics & ML Portfolio",
+  "short_name": "Atharva Bakde",
+  "description": "Data Analytics & Machine Learning Portfolio",
+  "start_url": "/AtharvabakdePortfolio2.0/",
+  "display": "standalone",
+  "background_color": "#fdfaf3",
+  "theme_color": "#472425",
+  "icons": [
+    {
+      "src": "/AtharvabakdePortfolio2.0/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/AtharvabakdePortfolio2.0/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
