@@ -293,8 +293,13 @@ body{
 
 /* ── HERO ── */
 .home-1{height:100vh;min-height:100vh;padding-top:6.48vh;padding-bottom:6.48vh;display:flex}
-@media(max-width:960px){.home-1{height:auto;min-height:100dvh;padding-top:60px;padding-bottom:60px}}
-@media(max-width:960px){.home-1__container{justify-content:space-between;gap:clamp(16px,4vh,40px)}}
+@media(max-width:960px){.home-1{height:100dvh;min-height:100dvh;padding-top:60px;padding-bottom:60px}}
+@media(max-width:960px){.home-1__container{justify-content:space-between;gap:0}}
+.home-1__photo-mobile{display:none}
+@media(max-width:960px){
+  .home-1__photo-mobile{display:block;width:130px;height:130px;border-radius:50%;overflow:hidden;margin:0 auto;flex-shrink:0}
+  .home-1__photo-mobile img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+}
 .home-1__container{height:100%;display:flex;flex-direction:column;justify-content:space-between}
 
 /* TOP: name (left) + nav (right) sit on the SAME row */
@@ -333,7 +338,7 @@ body{
 .home-1__cd{text-align:right;display:flex;flex-direction:column;align-items:flex-end;margin-right:-4.896vw}
 .home-1__cd .h1{line-height:.86em}
 .home-1__cd__label{font-size:1.1vw;font-weight:300;opacity:.45;margin-bottom:.2vw}
-@media(max-width:960px){.home-1__cd{margin-right:-20px;align-self:flex-end}.home-1__cd__label{font-size:12px}.home-1__cd .h1{font-size:clamp(52px,15vw,90px)}}
+@media(max-width:960px){.home-1__cd{margin-right:0;align-self:flex-end}.home-1__cd__label{font-size:12px}.home-1__cd .h1{font-size:clamp(52px,14vw,80px)}}
 
 .top-nav{text-align:right}
 @media(max-width:960px){.top-nav{display:none}}
@@ -380,7 +385,7 @@ body{
 .about-photo{width:100%;display:block;object-fit:cover;object-position:center 20%;aspect-ratio:3/4;filter:grayscale(18%);transition:filter .6s}
 .about-photo-wrap:hover .about-photo{filter:grayscale(0%)}
 @media(min-width:601px) and (max-width:960px){.about-photo{display:block;aspect-ratio:16/9;max-height:360px}}
-@media(max-width:600px){.about-photo{display:block;aspect-ratio:4/3;max-height:220px;object-fit:cover}}
+@media(max-width:600px){.about-photo{display:block;aspect-ratio:4/3;max-height:220px;object-fit:cover;object-position:center 55%}}
 .about-bio b{font-weight:600;color:var(--fg)}
 .about-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5vw}
 @media(max-width:960px){.about-cards{gap:16px}}
@@ -1107,6 +1112,10 @@ img,video,iframe{max-width:100%;height:auto}
         <span class="home-1__mid-item">Snowflake<span class="home-1__mid-dot"></span></span>
         <span class="home-1__mid-item">UMass Amherst · 2026<span class="home-1__mid-dot"></span></span>
       </div>
+    </div>
+
+    <div class="home-1__photo-mobile" aria-hidden="true">
+      <img src="./assets/me.jpg" alt="Atharva Bakde">
     </div>
 
     <div class="home-1__bottom" id="heroBottom">
