@@ -380,7 +380,7 @@ body{
 .about-photo{width:100%;display:block;object-fit:cover;object-position:top center;aspect-ratio:3/4;filter:grayscale(18%);transition:filter .6s}
 .about-photo-wrap:hover .about-photo{filter:grayscale(0%)}
 @media(min-width:601px) and (max-width:960px){.about-photo{display:block;aspect-ratio:16/9;max-height:360px}}
-@media(max-width:600px){.about-photo{display:none}}
+@media(max-width:600px){.about-photo{display:block;aspect-ratio:4/3;max-height:220px;object-fit:cover}}
 .about-bio b{font-weight:600;color:var(--fg)}
 .about-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5vw}
 @media(max-width:960px){.about-cards{gap:16px}}
@@ -476,7 +476,7 @@ body{
   .work:nth-child(5){grid-column:3;grid-row:2;max-width:20.833vw}
   .work:nth-child(5) .work__img{padding-bottom:139.5%;height:0}
 }
-@media(max-width:960px){.work__img{padding-bottom:100%!important;height:0;width:100%}}
+@media(max-width:960px){.work__img{padding-bottom:75%!important;height:0;width:100%}}
 
 .work__idx{font-size:1.1vw;display:block}
 @media(max-width:960px){.work__idx{font-size:13px}}
@@ -671,6 +671,7 @@ body{
 @media(max-width:960px){.before-footer__contact-val{font-size:14px}}
 
 .before-footer__center{display:flex;justify-content:center}
+@media(max-width:960px){.before-footer__center{display:none}}
 
 .before-footer__avail{display:flex;flex-direction:column;gap:1vw;align-items:flex-end;text-align:right}
 @media(max-width:960px){.before-footer__avail{align-items:flex-start;text-align:left;gap:12px}}
@@ -909,7 +910,7 @@ img,video,iframe{max-width:100%;height:auto}
 
   .works{grid-template-columns:1fr!important;gap:32px}
   .work:nth-child(n){grid-column:1!important;grid-row:auto!important;max-width:100%!important;width:100%!important;margin-top:0!important}
-  .work:nth-child(n) .work__img{padding-bottom:100%!important}
+  .work:nth-child(n) .work__img{padding-bottom:75%!important}
 
   .skills-grid{grid-template-columns:1fr}
   .certs-grid{grid-template-columns:1fr}
@@ -942,7 +943,7 @@ img,video,iframe{max-width:100%;height:auto}
 
   .works{grid-template-columns:1fr 1fr!important;gap:28px}
   .work:nth-child(n){grid-column:auto!important;grid-row:auto!important;max-width:100%!important;width:100%!important;margin-top:0!important}
-  .work:nth-child(n) .work__img{padding-bottom:100%!important}
+  .work:nth-child(n) .work__img{padding-bottom:75%!important}
 
   .exp-item__content{grid-template-columns:1fr;gap:10px;padding:20px 0}
 
