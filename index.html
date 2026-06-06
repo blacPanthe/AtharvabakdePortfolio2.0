@@ -539,9 +539,9 @@ body{
 @media(max-width:960px){.blog-card__cover{margin-bottom:10px}}
 .blog-card__cover-emoji{font-size:3.5vw;line-height:1;filter:grayscale(20%)}
 @media(max-width:960px){.blog-card__cover-emoji{font-size:48px}}
-.blog-card__cover--health{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)}
-.blog-card__cover--dp{background:linear-gradient(135deg,#2d1b1b 0%,#472425 100%)}
-.blog-card__cover--ai{background:linear-gradient(135deg,#1a2a1a 0%,#0f2a0f 50%,#1a3a1a 100%)}
+.blog-card__cover--health{background:url('./assets/Samsung.png') center/cover no-repeat}
+.blog-card__cover--dp{background:url('./assets/Dynamic.png') center/cover no-repeat}
+.blog-card__cover--ai{background:url('./assets/Ai in social media.png') center/cover no-repeat}
 .blog-card:hover .blog-card__cover{opacity:.85}
 
 /* ── PUBLICATIONS ── */
@@ -1442,9 +1442,7 @@ img,video,iframe{max-width:100%;height:auto}
     </div>
     <div class="blog-grid">
       <a href="https://atharvabakde.medium.com/from-steps-to-self-awareness-a-data-driven-analysis-of-my-6-year-health-journey-f4c4bbf78d1a" target="_blank" class="blog-card blog-card--featured">
-        <div class="blog-card__cover blog-card__cover--health">
-          <span class="blog-card__cover-emoji">📊</span>
-        </div>
+        <div class="blog-card__cover blog-card__cover--health"></div>
         <span class="blog-card__tag">Featured · Data Science</span>
         <div class="blog-card__title">From Steps to Self-Awareness: A Data-Driven Analysis of My 6-Year Health Journey</div>
         <p class="blog-card__desc">Building a full ML pipeline on 6 years of personal Samsung Health data — cleaning 64 raw files, engineering 108 features, and finding patterns I never noticed while living them.</p>
@@ -1452,18 +1450,14 @@ img,video,iframe{max-width:100%;height:auto}
       </a>
       <div style="display:flex;flex-direction:column;gap:1.5vw">
         <a href="https://atharvabakde.medium.com/dynamic-programming-strategy-for-real-world-problem-solving-94770da67231" target="_blank" class="blog-card">
-          <div class="blog-card__cover blog-card__cover--dp">
-            <span class="blog-card__cover-emoji">⚡</span>
-          </div>
+          <div class="blog-card__cover blog-card__cover--dp"></div>
           <span class="blog-card__tag">Engineering</span>
           <div class="blog-card__title">Dynamic Programming Strategy for Real-World Problem Solving</div>
           <p class="blog-card__desc">Breaking down DP patterns with practical examples beyond textbook problems.</p>
           <span class="blog-card__link">Read on Medium →</span>
         </a>
         <a href="https://atharvabakde.medium.com/artificial-intelligence-in-social-media-79ba5f73b79d" target="_blank" class="blog-card">
-          <div class="blog-card__cover blog-card__cover--ai">
-            <span class="blog-card__cover-emoji">🤖</span>
-          </div>
+          <div class="blog-card__cover blog-card__cover--ai"></div>
           <span class="blog-card__tag">AI · Opinion</span>
           <div class="blog-card__title">Artificial Intelligence in Social Media</div>
           <p class="blog-card__desc">How AI shapes what we see, share, and believe across social platforms.</p>
