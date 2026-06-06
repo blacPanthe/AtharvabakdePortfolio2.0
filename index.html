@@ -1922,15 +1922,29 @@ document.getElementById('back1').addEventListener('click', () => goStep(1));
 document.getElementById('back2').addEventListener('click', () => goStep(2));
 document.getElementById('sendBtn').addEventListener('click', () => {
   if(!document.getElementById('inp3').value.trim()){ document.getElementById('inp3').classList.add('err'); return; }
-  document.getElementById('thankYou').classList.add('visible');
-  counter.style.display='none';
-  setTimeout(() => {
-    closeForm();
-    document.getElementById('thankYou').classList.remove('visible');
-    counter.style.display='';
-    goStep(1);
-    document.querySelectorAll('.input').forEach(i => { i.value=''; i.classList.remove('has-val','err'); });
-  }, 3000);
+  const name    = document.getElementById('inp1').value.trim();
+  const email   = document.getElementById('inp2').value.trim();
+  const message = document.getElementById('inp3').value.trim();
+  fetch('https://formspree.io/f/xpqeqjzv', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ name, email, message })
+  })
+  .then(r => r.json())
+  .then(() => {
+    document.getElementById('thankYou').classList.add('visible');
+    counter.style.display='none';
+    setTimeout(() => {
+      closeForm();
+      document.getElementById('thankYou').classList.remove('visible');
+      counter.style.display='';
+      goStep(1);
+      document.querySelectorAll('.input').forEach(i => { i.value=''; i.classList.remove('has-val','err'); });
+    }, 3000);
+  })
+  .catch(() => {
+    document.getElementById('inp3').classList.add('err');
+  });
 });
 
 ['inp1','inp2','inp3'].forEach((id,i) => {
