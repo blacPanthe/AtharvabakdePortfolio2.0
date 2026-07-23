@@ -777,6 +777,32 @@ body{
 .back-to-top:hover{background:var(--fg);color:var(--light)}
 @media(max-width:960px){.back-to-top{width:44px;height:44px;bottom:20px;right:20px;font-size:9px}}
 
+/* ── CHESS ── */
+.chess-wrap{margin-top:4vw;display:flex;flex-direction:column;align-items:center;gap:1.5vw}
+@media(max-width:960px){.chess-wrap{margin-top:40px;gap:14px}}
+.chess-top-bar{display:flex;justify-content:space-between;align-items:center;width:min(512px,90vw);margin-bottom:.5vw}
+@media(max-width:960px){.chess-top-bar{margin-bottom:8px}}
+.chess-status{font-size:1.1vw;font-weight:400;letter-spacing:.04em;flex:1;text-transform:none}
+@media(max-width:960px){.chess-status{font-size:13px}}
+.chess-board{display:grid;grid-template-columns:repeat(8,1fr);width:min(512px,90vw);height:min(512px,90vw);border:1px solid var(--fg);flex-shrink:0}
+.chess-cell{display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
+.chess-light{background:#f0d9b5}
+.chess-dark{background:#b58863}
+[data-dark] .chess-light{background:#3d2b1f}
+[data-dark] .chess-dark{background:#2a1e15}
+[data-green] .chess-light{background:#1a3a1a}
+[data-green] .chess-dark{background:#0d2210}
+.chess-selected{background:#f6f669!important;opacity:.85}
+.chess-piece{font-size:calc(min(512px,90vw)/8*.7);line-height:1;user-select:none;pointer-events:none}
+.chess-white-piece{color:#fff;text-shadow:0 1px 3px #000,0 0 5px rgba(0,0,0,.9)}
+.chess-black-piece{color:#1a1a1a;text-shadow:0 1px 2px rgba(255,255,255,.4)}
+.chess-dot{width:32%;height:32%;border-radius:50%;background:rgba(0,0,0,.22);position:absolute;pointer-events:none}
+.chess-capture-ring{position:absolute;inset:0;box-shadow:inset 0 0 0 5px rgba(0,0,0,.28);pointer-events:none;z-index:2}
+.chess-coords{display:flex;width:min(512px,90vw);text-transform:none;font-size:calc(min(512px,90vw)/8*.2);opacity:.4;letter-spacing:0;font-weight:300}
+.chess-coords span{flex:1;text-align:center;padding-top:3px}
+.chess-hint{font-size:.833vw;font-weight:300;opacity:.4;text-transform:none;margin-top:.5vw}
+@media(max-width:960px){.chess-hint{font-size:11px;margin-top:6px}}
+
 /* ── VISITOR COUNTER ── */
 #visitorCount{transition:opacity .4s;opacity:0}
 #visitorCount.loaded{opacity:1}
