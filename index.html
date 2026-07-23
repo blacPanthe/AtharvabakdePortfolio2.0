@@ -786,16 +786,16 @@ body{
 @media(max-width:960px){.chess-status{font-size:13px}}
 .chess-board{display:grid;grid-template-columns:repeat(8,1fr);width:min(512px,90vw);height:min(512px,90vw);border:1px solid var(--fg);flex-shrink:0}
 .chess-cell{display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
-.chess-light{background:#f0d9b5}
-.chess-dark{background:#b58863}
-[data-dark] .chess-light{background:#3d2b1f}
-[data-dark] .chess-dark{background:#2a1e15}
-[data-green] .chess-light{background:#1a3a1a}
-[data-green] .chess-dark{background:#0d2210}
-.chess-selected{background:#f6f669!important;opacity:.85}
+.chess-light{background:#fdf5e8}
+.chess-dark{background:#472425}
+[data-dark] .chess-light{background:#1e1010}
+[data-dark] .chess-dark{background:#0a0404}
+[data-green] .chess-light{background:#0d2e0d}
+[data-green] .chess-dark{background:#071a05}
+.chess-selected{background:#c8b400!important;opacity:.85}
 .chess-piece{font-size:calc(min(512px,90vw)/8*.7);line-height:1;user-select:none;pointer-events:none}
-.chess-white-piece{color:#fff;text-shadow:0 1px 3px #000,0 0 5px rgba(0,0,0,.9)}
-.chess-black-piece{color:#1a1a1a;text-shadow:0 1px 2px rgba(255,255,255,.4)}
+.chess-white-piece{color:#fff;text-shadow:0 1px 3px #000,0 0 6px rgba(0,0,0,.95)}
+.chess-black-piece{color:#f0ddd0;text-shadow:0 0 2px #000,0 1px 4px rgba(0,0,0,.9),0 0 1px #000}
 .chess-dot{width:32%;height:32%;border-radius:50%;background:rgba(0,0,0,.22);position:absolute;pointer-events:none}
 .chess-capture-ring{position:absolute;inset:0;box-shadow:inset 0 0 0 5px rgba(0,0,0,.28);pointer-events:none;z-index:2}
 .chess-coords{display:flex;width:min(512px,90vw);text-transform:none;font-size:calc(min(512px,90vw)/8*.2);opacity:.4;letter-spacing:0;font-weight:300}
